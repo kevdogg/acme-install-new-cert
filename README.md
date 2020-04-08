@@ -47,7 +47,7 @@ The script can be ran with the `--dry-run` option which will simply echo back th
 
 The flags `-t/--test` and `--do-not-install` are often used together when wanting to do a "trial run" to ensure Let's Encrypt Servers are working.  I would encourage use of these parameters in nearly every case
 
-The `--force` command is needed after using the `--test` command above.  Unlike certbot.sh, when acme.sh uses Let's Encrypt test servers, it will actually download and temporarily hold the "bogus test certificate".  The force command is to tell acme.sh to forget this "bogus certificate" and actually install the certificate from Let's Encrypt's production servers. (Certbot for the record does not need this workaround)
+The `--force` command is needed after using the `--test` command above.  Unlike certbot.sh, when acme.sh uses Let's Encrypt test servers, it will actually download and temporarily hold the "bogus test certificate".  The force command is to tell acme.sh to forget this "bogus certificate" and actually install the certificate from Let's Encrypt's production servers. (Certbot for the record does not need this workaround).
 
 The `-c/--command` option is the command that is run after installation of the certificate.  Common examples for this could be "nginx -s reload" or other such variant.  This command is optional.  If you need to change the reload command in the future, run this script with the --do-not-issue flag.  The reload command will be changed without forcing Let's Encrypt to issue a new certificate
 
